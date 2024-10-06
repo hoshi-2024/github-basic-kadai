@@ -1,0 +1,42 @@
+PS C:\Users\1921006\Documents\github> mkdir git_challenge
+
+
+    ディレクトリ: C:\Users\1921006\Documents\github
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/10/06     19:09                git_challenge
+
+
+PS C:\Users\1921006\Documents\github> cd git_challenge
+PS C:\Users\1921006\Documents\github\git_challenge> git init
+Initialized empty Git repository in C:/Users/1921006/Documents/github/git_challenge/.git/
+
+
+
+PS C:\Users\1921006\Documents\github\git_challenge> echo 'Hello, world!' >> hello_world.txt
+PS C:\Users\1921006\Documents\github\git_challenge> git add .
+PS C:\Users\1921006\Documents\github\git_challenge> git commit -m 'hello_world.txtを追加'
+[main (root-commit) c0c91ab] hello_world.txtを追加
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\Users\1921006\Documents\github\git_challenge> cat hello_world.txt 
+Hello, world!
+
+
+
+PS C:\Users\1921006\Documents\github\git_challenge> echo 'こんにちは、世界！' >> hello_world.txt
+PS C:\Users\1921006\Documents\github\git_challenge> git add -A
+PS C:\Users\1921006\Documents\github\git_challenge> git commit -m '日本語訳を追加'
+[main ec9e310] 日本語訳を追加
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\1921006\Documents\github\git_challenge> cat hello_world.txt
+Hello, world!
+こんにちは、世界！
+
+
+
+PS C:\Users\1921006\Documents\github\git_challenge> git log --oneline                           
+ec9e310 (HEAD -> main) 日本語訳を追加
+c0c91ab hello_world.txtを追加
